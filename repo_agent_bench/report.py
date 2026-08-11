@@ -88,13 +88,14 @@ def render_html(name: str, results: list[TrialResult]) -> str:
         rows.append(
             "<tr>"
             f"<td>{html.escape(summary.variant)}</td>"
-            f'<td><div class=bar><span style="width:{width}%"></span></div>{width}%</td>'
+            f'<td><div class=bar aria-hidden="true"><span style="width:{width}%"></span></div>'
+            f'<span class="rate">{width}%</span></td>'
             f"<td>{summary.trials}</td><td>{summary.median_duration_seconds:.2f}s</td>"
             f"<td>{summary.median_churn:.0f}</td><td>{tokens}</td>"
             "</tr>"
         )
     return """<!doctype html>
-<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width">
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width"><link rel="icon" href="data:,">
 <title>{title}</title><style>
 body{{font:15px system-ui;max-width:960px;margin:48px auto;padding:0 20px;color:#172033;background:#f7f8fb}}
 h1{{font-size:28px}}table{{width:100%;border-collapse:collapse;background:white;box-shadow:0 8px 30px #17203312}}

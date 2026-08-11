@@ -2,6 +2,8 @@ __pycache__/
 .pytest_cache/
 .ruff_cache/
 .repo-agent-bench/
+.playwright-cli/
+output/
 .coverage
 htmlcov/
 .venv/

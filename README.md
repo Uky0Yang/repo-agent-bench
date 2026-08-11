@@ -16,12 +16,14 @@ Use it to answer questions such as:
 - Which coding-agent command produces the smallest verified patch?
 
 ```text
-Variant       Pass rate   Median time   Median churn   Median tokens
-vanilla              0%          0.03s              1              18
-guided             100%          0.03s              1              22
+Variant       Pass rate   Trials   Median churn   Median tokens
+vanilla              0%        2              1              21
+guided             100%        2              1              21
 ```
 
 > The numbers above come from the bundled deterministic demo, not a claim about a real model.
+
+![Self-contained HTML report produced by the bundled deterministic demo](docs/assets/demo-report.png)
 
 ## Why this exists
 

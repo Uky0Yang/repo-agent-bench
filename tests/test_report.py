@@ -45,3 +45,17 @@ def test_should_render_self_contained_html() -> None:
     html = render_html("demo", [_result("guided", 1, True, 1.0)])
 
     assert "<html" in html and "https://" not in html
+
+
+def test_should_render_without_a_favicon_request() -> None:
+    """RAB-006: Opening a local report should not create a console 404."""
+    html = render_html("demo", [_result("guided", 1, True, 1.0)])
+
+    assert '<link rel="icon" href="data:,">' in html
+
+
+def test_should_render_accessible_pass_rate_text() -> None:
+    """RAB-006: Pass rates remain readable without interpreting the visual bar."""
+    html = render_html("demo", [_result("guided", 1, True, 1.0)])
+
+    assert '<span class="rate">100%</span>' in html
