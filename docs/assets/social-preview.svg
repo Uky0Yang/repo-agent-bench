@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="640" viewBox="0 0 1280 640" role="img" aria-labelledby="title desc">
+  <title id="title">repo-agent-bench social preview</title>
+  <desc id="desc">A visual comparison of coding-agent workflow variants feeding deterministic checks and evidence.</desc>
+  <defs>
+    <linearGradient id="background" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#07111f"/>
+      <stop offset="1" stop-color="#10233d"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#22d3ee"/>
+      <stop offset="1" stop-color="#60a5fa"/>
+    </linearGradient>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#b9d8ff" stroke-opacity="0.055" stroke-width="1"/>
+    </pattern>
+    <filter id="shadow" x="-30%" y="-30%" width="160%" height="160%">
+      <feDropShadow dx="0" dy="14" stdDeviation="18" flood-color="#000814" flood-opacity="0.38"/>
+    </filter>
+  </defs>
+
+  <rect width="1280" height="640" fill="url(#background)"/>
+  <rect width="1280" height="640" fill="url(#grid)"/>
+  <circle cx="1130" cy="80" r="250" fill="#2563eb" opacity="0.11"/>
+  <circle cx="130" cy="610" r="220" fill="#06b6d4" opacity="0.08"/>
+
+  <g font-family="Segoe UI, Arial, sans-serif">
+    <text x="84" y="82" fill="#67e8f9" font-size="18" font-weight="700" letter-spacing="3">OPEN SOURCE  •  LOCAL-FIRST  •  VENDOR-NEUTRAL</text>
+    <text x="80" y="164" fill="#f8fafc" font-size="60" font-weight="750" letter-spacing="-2">repo-agent-bench</text>
+    <text x="84" y="213" fill="#bfd0e5" font-size="25">A/B test coding-agent workflows on your own repository.</text>
+
+    <g filter="url(#shadow)">
+      <rect x="84" y="270" width="300" height="148" rx="20" fill="#101f33" stroke="#3b506b" stroke-width="2"/>
+      <rect x="105" y="293" width="104" height="28" rx="14" fill="#27384d"/>
+      <text x="157" y="313" text-anchor="middle" fill="#cbd5e1" font-size="14" font-weight="700" letter-spacing="1">VANILLA</text>
+      <text x="108" y="360" fill="#f8fafc" font-size="23" font-weight="650">Base agent</text>
+      <text x="108" y="392" fill="#91a6bf" font-size="17">Same repo • prompt • timeout</text>
+
+      <rect x="84" y="440" width="300" height="148" rx="20" fill="#10283a" stroke="#22d3ee" stroke-opacity="0.65" stroke-width="2"/>
+      <rect x="105" y="463" width="104" height="28" rx="14" fill="#0e7490"/>
+      <text x="157" y="483" text-anchor="middle" fill="#ecfeff" font-size="14" font-weight="700" letter-spacing="1">GUIDED</text>
+      <text x="108" y="530" fill="#f8fafc" font-size="23" font-weight="650">Rules • Skills • MCP</text>
+      <text x="108" y="562" fill="#9bc7d4" font-size="17">Controlled workflow variant</text>
+
+      <rect x="505" y="329" width="326" height="198" rx="24" fill="#0b1728" stroke="#4c6380" stroke-width="2"/>
+      <circle cx="557" cy="379" r="22" fill="#0e7490"/>
+      <path d="M548 379l7 7 13-16" fill="none" stroke="#ecfeff" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+      <text x="596" y="388" fill="#f8fafc" font-size="27" font-weight="700">Deterministic checks</text>
+      <line x1="548" y1="418" x2="788" y2="418" stroke="#34485f" stroke-width="2"/>
+      <text x="548" y="455" fill="#a9bdd4" font-size="18">Tests • allowed paths • timeouts</text>
+      <text x="548" y="488" fill="#a9bdd4" font-size="18">Agent claims never decide the result</text>
+
+      <rect x="925" y="329" width="271" height="198" rx="24" fill="#f8fafc"/>
+      <text x="957" y="375" fill="#1e3a5f" font-size="16" font-weight="800" letter-spacing="2">REVIEWABLE EVIDENCE</text>
+      <text x="957" y="421" fill="#0f172a" font-size="22" font-weight="700">PASS RATE</text>
+      <text x="957" y="455" fill="#0f172a" font-size="22" font-weight="700">TIME • CHURN</text>
+      <text x="957" y="489" fill="#0f172a" font-size="22" font-weight="700">TOKENS • DIFF</text>
+    </g>
+
+    <path d="M405 344 C450 344 458 390 493 390" fill="none" stroke="#7891ad" stroke-width="4" stroke-linecap="round"/>
+    <path d="M405 514 C450 514 458 466 493 466" fill="none" stroke="#22d3ee" stroke-width="4" stroke-linecap="round"/>
+    <path d="M844 428 H909" fill="none" stroke="url(#accent)" stroke-width="5" stroke-linecap="round"/>
+    <path d="M900 416 L916 428 900 440" fill="none" stroke="#60a5fa" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+
+    <rect x="850" y="86" width="346" height="66" rx="16" fill="#07111f" stroke="#31506f" stroke-width="2"/>
+    <text x="882" y="128" fill="#d8e7f7" font-family="Cascadia Mono, Consolas, monospace" font-size="21">uvx repo-agent-bench</text>
+  </g>
+</svg>

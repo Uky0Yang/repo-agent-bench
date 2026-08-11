@@ -4,7 +4,7 @@ build-backend = "hatchling.build"
 
 [project]
 name = "repo-agent-bench"
-version = "0.1.0"
+version = "0.1.1"
 description = "A/B test coding-agent workflows on your own repository with isolated worktrees and deterministic verification."
 readme = "README.md"
 requires-python = ">=3.10"
@@ -31,8 +31,10 @@ dependencies = [
 
 [project.urls]
 Homepage = "https://github.com/Uky0Yang/repo-agent-bench"
+Documentation = "https://github.com/Uky0Yang/repo-agent-bench/blob/main/docs/CONFIGURATION.md"
 Issues = "https://github.com/Uky0Yang/repo-agent-bench/issues"
 Source = "https://github.com/Uky0Yang/repo-agent-bench"
+Changelog = "https://github.com/Uky0Yang/repo-agent-bench/blob/main/CHANGELOG.md"
 
 [project.optional-dependencies]
 dev = [

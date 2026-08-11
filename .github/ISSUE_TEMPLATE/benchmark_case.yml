@@ -1,0 +1,53 @@
+name: Share a benchmark case
+description: Share a reproducible coding-agent workflow comparison or request help designing one.
+title: "[Benchmark case]: "
+labels:
+  - benchmark-case
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for helping build repository-local evidence about coding-agent workflows. Remove private repository details, credentials, and proprietary prompts before submitting.
+  - type: input
+    id: repository
+    attributes:
+      label: Repository or minimal reproduction
+      description: Link a public repository or describe a sanitized local fixture.
+      placeholder: https://github.com/owner/repository
+    validations:
+      required: true
+  - type: input
+    id: agent
+    attributes:
+      label: Agent and version
+      placeholder: Codex CLI 0.x, Claude Code x.y, OpenCode x.y, or custom command
+    validations:
+      required: true
+  - type: textarea
+    id: variants
+    attributes:
+      label: Variants compared
+      description: Describe the controlled difference, such as vanilla versus AGENTS.md or Skill enabled versus removed.
+    validations:
+      required: true
+  - type: textarea
+    id: checks
+    attributes:
+      label: Deterministic checks
+      description: List the commands and allowed paths that decide whether a trial passes.
+    validations:
+      required: true
+  - type: textarea
+    id: results
+    attributes:
+      label: Results and artifacts
+      description: Include trial count, pass rate, duration, churn, tokens when available, and a sanitized report.
+    validations:
+      required: true
+  - type: checkboxes
+    id: safety
+    attributes:
+      label: Safety check
+      options:
+        - label: I removed credentials, private source code, proprietary prompts, and sensitive transcript content.
+          required: true

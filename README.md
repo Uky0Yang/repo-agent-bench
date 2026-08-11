@@ -134,6 +134,13 @@ See [docs/CONFIGURATION.md](docs/CONFIGURATION.md) for the complete schema, over
 - Token extraction is conservative; when no explicit usage object is present, the report says `unknown`.
 - v0.1 runs trials sequentially to avoid surprising concurrent cost or rate-limit spikes.
 
+## Related Agent OSS Toolkit
+
+- [repo-context-card](https://github.com/Uky0Yang/repo-context-card) generates compact repository context for coding agents.
+- [agent-rules-lint](https://github.com/Uky0Yang/agent-rules-lint) checks repository-level agent instructions before a benchmark.
+- [repo-trust-scan](https://github.com/Uky0Yang/repo-trust-scan) preflights repositories before running agent commands.
+- [mcp-server-doctor](https://github.com/Uky0Yang/mcp-server-doctor) diagnoses MCP configuration and handshake failures.
+
 ## Development
 
 ```bash
