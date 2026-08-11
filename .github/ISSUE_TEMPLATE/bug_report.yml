@@ -1,0 +1,37 @@
+name: Bug report
+description: Report an incorrect result or harness failure
+title: "[Bug] "
+labels:
+  - bug
+body:
+  - type: markdown
+    attributes:
+      value: Do not paste secrets, private source, or unredacted agent transcripts.
+  - type: textarea
+    id: behavior
+    attributes:
+      label: Observed behavior
+      description: What happened, and what did you expect instead?
+    validations:
+      required: true
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Minimal reproduction
+      description: Use a public or synthetic repository and redact command output.
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: Version
+      placeholder: repo-agent-bench 0.1.0
+    validations:
+      required: true
+  - type: input
+    id: platform
+    attributes:
+      label: OS and Python
+      placeholder: Windows 11, Python 3.13
+    validations:
+      required: true

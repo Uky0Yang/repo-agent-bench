@@ -1,0 +1,31 @@
+name: repo-agent-bench
+version: 1
+requirements:
+  - id: RAB-001
+    description: Load and validate a versioned YAML benchmark definition.
+    test: unit
+    code: done
+  - id: RAB-002
+    description: Run every trial in a detached temporary git worktree.
+    test: unit
+    code: done
+  - id: RAB-003
+    description: Apply variant overlays and removals without mutating the source repository.
+    test: unit
+    code: done
+  - id: RAB-004
+    description: Verify runner exit status, deterministic checks, timeouts, and allowed paths.
+    test: unit
+    code: done
+  - id: RAB-005
+    description: Record duration, diff churn, transcript size, and reported token usage.
+    test: unit
+    code: done
+  - id: RAB-006
+    description: Produce JSON, Markdown, and self-contained HTML comparison reports.
+    test: unit
+    code: done
+  - id: RAB-007
+    description: Provide validate and run commands with machine-usable exit codes.
+    test: unit
+    code: done

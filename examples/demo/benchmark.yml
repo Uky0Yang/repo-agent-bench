@@ -1,0 +1,20 @@
+version: 1
+name: deterministic-demo
+repository: ../..
+base_ref: HEAD
+prompt: Create demo-result.txt with the exact verified value.
+trials: 2
+timeout_seconds: 30
+
+checks:
+  - [python, examples/demo/verify.py]
+
+allowed_paths:
+  - demo-result.txt
+
+variants:
+  - name: vanilla
+    command: [python, examples/demo/demo_agent.py, incomplete, "{prompt}"]
+
+  - name: guided
+    command: [python, examples/demo/demo_agent.py, verified, "{prompt}"]
