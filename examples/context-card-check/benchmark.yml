@@ -1,0 +1,35 @@
+version: 1
+name: context-card-check
+repository: ../../../repo-context-card
+base_ref: 6cc18043da0256d30d416026f5140e901d8c646d
+prompt: >-
+  Implement a read-only --check option in repo-context-card. With --output it must
+  return 0 for a current card, 1 for a missing or stale card, and never write in
+  check mode. Reject --check without --output. Generated Markdown and JSON cards
+  must be stable across repeated runs when stored inside the target repository.
+  Add regression tests and preserve existing CLI behaviour otherwise. Work only
+  in this worktree. Do not access network tools, credentials or other directories;
+  do not commit changes or change .benchmark acceptance tests. Run the existing
+  tests and the acceptance tests. No subagents.
+trials: 1
+timeout_seconds: 600
+checks:
+  - [python, -m, unittest, discover, -s, tests]
+  - [python, -m, unittest, discover, -s, .benchmark]
+allowed_paths:
+  - repo_context_card/*.py
+  - tests/*.py
+variants:
+  - name: baseline
+    command: [codex, exec, --ephemeral, --sandbox, workspace-write, --json, "{prompt}"]
+    remove: [AGENTS.md]
+    overlay:
+      - source: acceptance.py
+        target: .benchmark/test_acceptance.py
+  - name: guided
+    command: [codex, exec, --ephemeral, --sandbox, workspace-write, --json, "{prompt}"]
+    overlay:
+      - source: acceptance.py
+        target: .benchmark/test_acceptance.py
+      - source: GUIDANCE.md
+        target: AGENTS.md
