@@ -2,6 +2,8 @@
 
 [Real-repository case: implement context-card freshness checks](examples/context-card-check/README.md) — fixed public commit, identical acceptance tests, baseline vs task-specific guidance. Running it invokes your own Codex CLI and consumes model allowance; the bundled fake-agent demo remains available for a no-model smoke test.
 
+[Real pilot results](examples/context-card-check/RESULTS.md): both variants passed functional tests but failed the file-scope gate. One trial each; no winner or performance claim.
+
 [![CI](https://github.com/Uky0Yang/repo-agent-bench/actions/workflows/ci.yml/badge.svg)](https://github.com/Uky0Yang/repo-agent-bench/actions/workflows/ci.yml)
 [![Python 3.10+](https://img.shields.io/badge/python-3.10%2B-blue.svg)](https://www.python.org/)
 [![License: MIT](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)

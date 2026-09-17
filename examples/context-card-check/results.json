@@ -1,0 +1,72 @@
+{
+  "schema_version": 1,
+  "experiment": "context-card-check",
+  "date": "2026-09-17",
+  "harness_commit": "8f115cf",
+  "base_ref": "6cc18043da0256d30d416026f5140e901d8c646d",
+  "trials_per_variant": 1,
+  "timeout_seconds": 600,
+  "allowed_paths": [
+    "repo_context_card/*.py",
+    "tests/*.py"
+  ],
+  "limitations": [
+    "n=1 per variant; no ranking or causal inference",
+    "Allowed-path list was not explicitly included in the agent prompt",
+    "Shared user/global configuration and caching were not disabled",
+    "Configured model read after execution; remote model revision not independently attested"
+  ],
+  "results": [
+    {
+      "variant": "baseline",
+      "passed": false,
+      "runner_exit_code": 0,
+      "timed_out": false,
+      "duration_seconds": 206.42983140000433,
+      "repository_tests_passed": 11,
+      "acceptance_tests_passed": 2,
+      "changed_files": [
+        "README.md",
+        "repo_context_card/cli.py",
+        "repo_context_card/scanner.py",
+        "tests/test_cli.py",
+        "tests/test_scanner.py"
+      ],
+      "additions": 154,
+      "deletions": 13,
+      "unexpected_files": [
+        "README.md"
+      ],
+      "token_usage": {
+        "input_tokens": 320488,
+        "cached_input_tokens": 274432,
+        "output_tokens": 4949
+      }
+    },
+    {
+      "variant": "guided",
+      "passed": false,
+      "runner_exit_code": 0,
+      "timed_out": false,
+      "duration_seconds": 155.2355186999921,
+      "repository_tests_passed": 11,
+      "acceptance_tests_passed": 2,
+      "changed_files": [
+        "README.md",
+        "repo_context_card/cli.py",
+        "repo_context_card/scanner.py",
+        "tests/test_cli.py"
+      ],
+      "additions": 146,
+      "deletions": 13,
+      "unexpected_files": [
+        "README.md"
+      ],
+      "token_usage": {
+        "input_tokens": 207690,
+        "cached_input_tokens": 164224,
+        "output_tokens": 4037
+      }
+    }
+  ]
+}

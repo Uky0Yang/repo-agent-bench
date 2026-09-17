@@ -40,5 +40,7 @@ Raw transcripts stay under the ignored `.repo-agent-bench/` directory. Review an
 redact before sharing; automatic redaction is best-effort. Never publish local
 paths, account/session identifiers, credentials or full private configuration.
 
-Execution status and any reviewed results are recorded in `RESULTS.md` when a
-real run has completed; the presence of this case alone is not a benchmark result.
+[The 2026-09-17 pilot results](RESULTS.md) record two completed real trials:
+both passed functional checks and failed the predeclared file-scope gate.
+The report includes the prompt's scope-disclosure limitation and makes no
+performance or reliability claim from one trial per variant.
