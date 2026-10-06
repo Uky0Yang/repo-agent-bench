@@ -4,6 +4,8 @@
 
 [Real pilot results](examples/context-card-check/RESULTS.md): both variants passed functional tests but failed the file-scope gate. One trial each; no winner or performance claim.
 
+The [revised v2 case](examples/context-card-check/README.md#revised-scope-disclosure-v2) now states allowed paths in both prompts. Configuration validated; new model trials pending.
+
 [![CI](https://github.com/Uky0Yang/repo-agent-bench/actions/workflows/ci.yml/badge.svg)](https://github.com/Uky0Yang/repo-agent-bench/actions/workflows/ci.yml)
 [![Python 3.10+](https://img.shields.io/badge/python-3.10%2B-blue.svg)](https://www.python.org/)
 [![License: MIT](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)

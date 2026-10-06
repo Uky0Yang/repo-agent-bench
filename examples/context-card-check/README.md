@@ -24,6 +24,29 @@ guidance. Both use `codex exec --ephemeral --sandbox workspace-write --json`.
 The sandbox must be supported and enabled on the host; do not remove it to obtain
 a passing score. Other shared user/global instructions may still be loaded.
 
+## Revised scope disclosure (v2)
+
+[benchmark-v2.yml](benchmark-v2.yml) explicitly tells both agents which paths
+they may change and that a README edit invalidates the trial. It uses the same
+base, acceptance checks and task-specific guidance. The original configuration
+and September results remain available for reproducibility.
+
+Validate the revised configuration without making model calls:
+
+```bash
+repo-agent-bench validate examples/context-card-check/benchmark-v2.yml
+```
+
+To run a new experiment, use a separate output directory:
+
+```bash
+repo-agent-bench run examples/context-card-check/benchmark-v2.yml --output .repo-agent-bench/context-card-check-v2
+```
+
+The v2 configuration has been validated but no v2 model trials have been run.
+Its changed prompt makes it a separate experiment; do not pool its future
+results with the original pilot.
+
 ## What the experiment can establish
 
 The checks require stable Markdown and JSON cards, no writes in check mode,
